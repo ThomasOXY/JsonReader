@@ -1,0 +1,32 @@
+{
+    "ALL": [
+        {
+            "absencetext": null,
+            "changeinfo": "",
+            "date": "po 10.1.",
+            "group": "",
+            "homeworks": "null",
+            "nameLesson": "Český jazyk a literatura",
+            "notice": "",
+            "room": "3033",
+            "teacher": "Mgr. Jana Durajová",
+            "theme": "J.A.Komenský",
+            "time": "1 (8:00 - 8:45)",
+            "type": "atom"
+        },
+        {
+            "absencetext": null,
+            "changeinfo": "",
+            "date": "po 10.1.",
+            "group": "AT",
+            "homeworks": null,
+            "nameLesson": "Elektrotechnika",
+            "notice": "",
+            "room": "105",
+            "teacher": "Ing. Jaroslav Dražan",
+            "theme": "Schématické značky, kreslení schémat",
+            "time": "2 (8:50 - 9:35)",
+            "type": "atom"
+        }
+    ]
+}

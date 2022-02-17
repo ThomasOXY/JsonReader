@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/app.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+</head>
+<body>
+  <section class="header">
+
+    <h1>Název Třídy</h1>
+
+
+  </section>
+<section class="Info">
+  <div class="items">
+  <h1>Předmět:</h1>
+<div class="variable" id="Lesson"></div>
+  <h1>Místnost:</h1>
+<div class="variable" id="Room"></div>
+<h1>Hodina:</h1>
+<div class="variable" id="Hours"></div>
+<h1>Učitel:</h1>
+<div class="variable" id="Teacher"></div>
+
+<div id="moreinfo" class="moreinfo">
+<h1>Domácí úkoly:</h1>
+<div class="variable" id="Homeworks"></div>
+<h1>Téma:</h1>
+<div class="variable" id="Theme"></div>
+</div>
+</div>
+
+
+</section>
+
+<div class="more">
+
+  <button id="morebutt" onclick="show()">Další informace</button>
+  <button onclick="hide()" id="offbutton" onclick="show()">Skrýt</button>
+
+</div>
+</body>
+</html>
+
+<script>
+function show(){
+  document.getElementById("moreinfo").style.display = "flex";
+  document.getElementById("morebutt").style.display = "none";
+  document.getElementById("offbutton").style.display = "flex";
+  
+}
+function hide(){
+  document.getElementById("moreinfo").style.display = "none";
+  document.getElementById("morebutt").style.display = "flex";
+  document.getElementById("offbutton").style.display = "none";
+}
+
+
+</script>
+
+<!--
+    VYTAHOVÁNÍ DAT Z TEST.json
+-->
+
+<script>
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "test.json",
+  "method": "GET"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+    var Lesson = response.ALL[1].nameLesson;
+    $("#Lesson").append(Lesson);
+
+  var Room = response.ALL[1].room;
+  $("#Room").append(Room);
+
+  var Hours = response.ALL[0].time;
+  $("#Hours").append(Hours);
+
+  var Teacher = response.ALL[0].teacher;
+  $("#Teacher").append(Teacher);
+
+  var Homework = response.ALL[0].homeworks;
+  $("#Homeworks").append(Homework);
+
+  var Theme = response.ALL[0].theme;
+  $("#Theme").append(Theme);
+  
+});
+</script>

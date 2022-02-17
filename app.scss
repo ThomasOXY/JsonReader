@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0a3d62;
+}
+button{
+
+    width: 10em;
+    height: 3em;
+    border-radius: 15px;
+    border: none;
+
+}
+.variable{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    
+}
+
+.Info{
+ 
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 100%;
+    min-height: 60vh ;
+ 
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 50%;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+}
+.more{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+max-height: 10vh;
+
+}
+.header{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.moreinfo{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+}
+#offbutton{
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#morebutt{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
